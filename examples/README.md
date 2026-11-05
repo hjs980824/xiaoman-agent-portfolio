@@ -6,11 +6,18 @@
 
 | 示例 | 展示内容 | 运行命令 |
 |---|---|---|
-| examples/metric-model/metric-validation.js | 指标定义、类型校验、格式化、不可变结果 | node examples/metric-model/metric-validation.js |
-| examples/data-normalization/normalize-source.js | 多来源字段映射、单位归一化、缺失 / 异常状态 | node examples/data-normalization/normalize-source.js |
-| examples/workflow/run-lifecycle.js | Run 状态、来源 checkpoint、幂等与结果冻结 | node examples/workflow/run-lifecycle.test.js |
+| [metric-model/metric-validation.js](metric-model/metric-validation.js) | 指标定义、类型校验、格式化、不可变结果 | node examples/metric-model/metric-validation.js |
+| [data-normalization/normalize-source.js](data-normalization/normalize-source.js) | 多来源字段映射、单位归一化、缺失 / 异常状态 | node examples/data-normalization/normalize-source.js |
+| [workflow/run-lifecycle.js](workflow/run-lifecycle.js) | Run 状态、来源 checkpoint、幂等与结果冻结 | node examples/workflow/run-lifecycle.test.js |
 
-要求：Node.js 18 或更高版本；无需安装第三方依赖。
+## 测试
+
+Node.js 18 或更高版本，无需安装第三方依赖。
+
+在仓库根目录执行：
+
+- node examples/samples.test.js
+- node examples/workflow/run-lifecycle.test.js
 
 ## 阅读顺序
 
