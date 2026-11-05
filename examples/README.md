@@ -6,9 +6,9 @@
 
 | 示例 | 展示内容 | 运行命令 |
 |---|---|---|
-| `metric-model/metric-validation.js` | 指标定义、类型校验、格式化、不可变结果 | `node examples/metric-model/metric-validation.js` |
-| `data-normalization/normalize-source.js` | 多来源字段映射、单位归一化、缺失 / 异常状态 | `node examples/data-normalization/normalize-source.js` |
-| `workflow/run-lifecycle.js` | Run 状态、来源 checkpoint、幂等与结果冻结 | `node examples/workflow/run-lifecycle.test.js` |
+| examples/metric-model/metric-validation.js | 指标定义、类型校验、格式化、不可变结果 | node examples/metric-model/metric-validation.js |
+| examples/data-normalization/normalize-source.js | 多来源字段映射、单位归一化、缺失 / 异常状态 | node examples/data-normalization/normalize-source.js |
+| examples/workflow/run-lifecycle.js | Run 状态、来源 checkpoint、幂等与结果冻结 | node examples/workflow/run-lifecycle.test.js |
 
 要求：Node.js 18 或更高版本；无需安装第三方依赖。
 
@@ -16,4 +16,6 @@
 
 1. 先看指标模型，理解为什么指标需要稳定 ID、单位、类型和定义版本。
 2. 再看数据归一化，理解为什么不同来源不能直接把原始数字混在一起。
-3. 最后看 Run �'�doydj9�'��#9�!�)��i&��iy��:a��f�..�.�9.b:g :)�H�X���[�8� yn`��byd�9�#��k���9� x� ����'�.��k���9.+y�[�^Y�9.��b�x� X�\\�K[�ۙ\����:+��+�y���� z, �n��e��9�iy��9c�9o��m�."�/k9. 9�(yc���h�i#{�#9ak9o 9�.�/��.#y���.��k��.�8� �
+3. 最后看 Run 生命周期，理解多来源采集为什么需要 checkpoint、幂等和明确终态。
+
+生产实现中的 IndexedDB 事务、capture-owner lock、调度器和浏览器采集逻辑仍保留在私有 POC 仓库中，公开示例不替代它们。
