@@ -88,6 +88,13 @@ flowchart TB
 
 Phase 10 于 2026-10-10 完成，涉及千川和罗盘两个数据源。该次验收未覆盖 Worker 休眠 / 重启恢复和真实 stall reload 路径。各模块的开发状态和验证边界见[验证记录](docs/evidence-and-validation.md)。
 
+## 核心代码示例
+
+公开仓库新增了三组可运行的脱敏代码示例，覆盖指标模型、数据来源归一化和 Run 生命周期，并附有测试与逐段导读。示例使用合成数据重新组织，不是生产源码的逐行复制。
+
+- [代码示例目录](examples/README.md)
+- [核心代码导读](docs/code-walkthrough.md)
+
 ## 技术组成
 
 - JavaScript：浏览器扩展、数据处理和业务逻辑。
@@ -104,4 +111,4 @@ Phase 10 于 2026-10-10 完成，涉及千川和罗盘两个数据源。该次�
 - [验证记录与当前边界](docs/evidence-and-validation.md)
 - [现场讲解提纲](docs/demo-script.md)
 
-当前仓库用于整理小满的项目说明、架构和验证文档，不包含完整源代码或公司业务数据。数据自动化 POC 源码仓库：[xiaoman-data-automation-poc](https://github.com/hjs980824/xiaoman-data-automation-poc)（私有仓库，需授权访问）。
+当前仓库用于整理小满的项目说明、架构、验证文档和脱敏代码示例，不包含完整生产源码或公司业务数据。数据自动化 POC 源码仓库：[xiaoman-data-automation-poc](https://github.com/hjs980824/xiaoman-data-automation-poc)（私有仓库，需授权访问）。
