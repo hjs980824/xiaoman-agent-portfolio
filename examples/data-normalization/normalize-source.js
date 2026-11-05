@@ -96,4 +96,14 @@ if (require.main === module) {
 
   const liveResult = normalizeCapture(ADAPTERS.liveDashboard, {
     paidAmountFen: 25680,
-    viewerCount: 'not-a$D
+    viewerCount: 'not-a-number'
+  }, {
+    captureId: 'capture-demo-live-001',
+    sessionKey: 'session-demo-001',
+    capturedAt: '2026-11-06T10:00:03+08:00'
+  });
+
+  console.log(JSON.stringify({ adsResult, liveResult }, null, 2));
+}
+
+module.exports = { ADAPTERS, normalizeCapture };
